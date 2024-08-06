@@ -10,13 +10,13 @@
 @preprocessor   less
 ==/UserStyle== */
 
-@bg: #121214;
-@alt: #19191c;
-@fg: #E6E6FF;
-@main: #c3b6f8;
-@font: 'Noto Sans', sans-serif;
-
 @-moz-document domain("lucida.to") {
+	@bg: #121214;
+	@alt: #19191c;
+	@fg: #E6E6FF;
+	@main: #c3b6f8;
+	@font: 'Noto Sans', sans-serif;
+	
 	body {
 		background-color: @bg;
 		background-image: none;
@@ -151,14 +151,14 @@
 			}
 		}
 	}
-}
+	
+	@keyframes navbar-hover {
+		0% {
+			border-color: transparent
+		}
 
-@keyframes navbar-hover {
-	0% {
-		border-color: transparent
-	}
-
-	100% {
-		border-color: @fg
+		100% {
+			border-color: @fg
+		}
 	}
 }
