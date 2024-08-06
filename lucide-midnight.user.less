@@ -1,0 +1,164 @@
+/* ==UserStyle==
+@name           Lucide.to Midnight
+@namespace      github.com/n3tael/lucide-midnight
+@description    Dark midnight theme for Lucide.
+@author			n3tael <netael@pm.me> (https://github.com/n3tael)
+@homepageURL	https://github.com/n3tael/lucide-midnight
+@supportURL		https://github.com/n3tael/lucide-midnight/issues
+@license		apache-2.0
+@version        1.0.0
+@preprocessor   less
+==/UserStyle== */
+
+@bg: #121214;
+@alt: #19191c;
+@fg: #E6E6FF;
+@main: #c3b6f8;
+@font: 'Noto Sans', sans-serif;
+
+@-moz-document domain("lucida.to") {
+	body {
+		background-color: @bg;
+		background-image: none;
+		color: @fg;
+		font-family: @font;
+		font-size: 12pt;
+	}
+
+	a, a.normal {
+		color: #AAA5F2;
+	}
+
+	hr {
+		border: 1px solid lighten(@bg, 10%);
+	}
+
+	details {
+		background-color: lighten(@bg, 5%) !important;
+		color: @fg;
+	}
+
+	.main {
+		border-radius: 6px;
+		background: @alt;
+		margin-bottom: 12px;
+		
+		.navbar {
+			background-color: @alt;
+			border-radius: 0;
+			padding: 0;
+			
+			a {
+				color: @fg;
+				font-weight: 600;
+				font-family: @font;
+				font-size: 14pt;
+				height: 100%;
+				padding: 5px 18px;
+				margin: 0;
+				border-radius: 0;
+				text-shadow: none;
+				border-top: 2px solid transparent;
+				
+				&.active {
+					background-color: transparent;
+					border-color: @fg;
+				}
+
+				&:not(.active):hover, &:not(.active):focus {
+					border: 0;
+					border-top: 2px solid;
+					border-color: @fg;
+					padding: 5px 18px;
+					animation: navbar-hover .3s ease-in-out;
+				}
+			}
+		}
+
+		.recent {
+			background-color: @main;
+			margin: 0;
+			.label {
+				background: linear-gradient(to left, transparent, lighten(@main, 5%) 16px);
+				color: @bg;
+			}
+		}
+
+		.home {
+			.left .biggerlinklist {
+				background: @alt;
+				margin: 0;
+				border-radius: 0;
+				width: auto;
+				padding: 0;
+				a {
+					color: @fg;
+					text-transform: lowercase;
+					text-shadow: none;
+					&:hover {
+						background-color: darken(@alt, 2%);
+					}
+
+					&:first-child {
+						margin-top: 0
+					}
+
+					&:last-child {
+						margin-bottom: 0
+					}
+				}
+			}
+
+			.right {
+				background-color: lighten(@bg, 5%);
+				color: @fg;
+				border-radius: 0;
+				.big {
+					font-style: normal;
+					font-weight: 700;
+					margin: 10px 0 0 0;
+				}
+
+				.download-form {
+					margin-bottom: 12px;
+				}
+
+				.dl-track {
+					background-color: @alt;
+					padding: 8px;
+					border-radius: 6px;
+					
+					img:not(.cover-right):not([src = "/loading.gif"]) {
+						filter: invert(1);
+					}
+
+					.download-button {
+						background-color: @main;
+						color: @bg;
+						img {
+							margin-right: 3px
+						}
+					}
+
+					.error {
+						background-color: darken($color, 50%);
+						color: #BB6262;
+						h2 {
+							font-size: 16pt
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@keyframes navbar-hover {
+	0% {
+		border-color: transparent
+	}
+
+	100% {
+		border-color: @fg
+	}
+}
