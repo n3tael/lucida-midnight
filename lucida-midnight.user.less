@@ -121,6 +121,10 @@
 
 				.download-form {
 					margin-bottom: 12px;
+					
+					#download, #country, #service, #go {
+						background: @main
+					}
 				}
 
 				.dl-track, .dl-album {
@@ -128,7 +132,7 @@
 					padding: 8px;
 					border-radius: 6px;
 					
-					img:not(.cover-right):not([src = "/loading.gif"]) {
+					img:not(.cover-right):not([src = "/loading.gif"]):not([src = "/icons/download_black.svg"]) {
 						filter: invert(1);
 					}
 
@@ -147,6 +151,10 @@
 							font-size: 16pt
 						}
 					}
+				}
+				
+				.dl-artist .block-album {
+					background-color: @alt;
 				}
 			}
 		}
